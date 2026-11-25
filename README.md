@@ -16,15 +16,18 @@
 7. **法人契約・店舗別オリジナル魚BOXの受注**
 
 ## リポジトリ構成
-- `index.html` / `styles.css` / `app.js`：AIショート動画 365日制作スタジオ Webアプリ（Vrew字幕・Dot10項目プロンプト・Metricool投稿文ワンクリック出力）
+- `index.html` / `styles.css` / `app.js`：AIショート動画 365日制作スタジオ Webアプリ（完成MP4プレイヤー・Vrew字幕・Dot10項目プロンプト・SNS投稿文ワンクリック出力）
+- `videos/`：Googleドライブ自社実写素材から直接書き出した日英完成ショート動画（`FA_DAY-01`・`FA_DAY-06` BGM付／BGMなし版・1080×1920・30秒）
 - `data.js`：初回28日間（日英56本）完全10項目台本、365日配信カレンダー（重複ゼロ）、写真350枚＋動画110本（計460点）素材DB、魚種10品目原価マスタ
 - `ファインアトラス_AIショート動画_毎日配信マスター台帳.xlsx`：6シート構成のExcelマスター台帳（数式自動集計・ステータスプルダウン付き）
 - `docs/社長計画書_ファインアトラス実態融合_実行設計書＆広報マニュアル.md`：全13章完全準拠の実行設計書・広報運用マニュアル
+- `scripts/render_short_video.py`：料理番組風・二層カメラワーク（引き→寄り・0.45秒フェード・時間差データ札）対応の直接MP4生成エンジン
 - `scripts/build_deliverables.py`：`data.js` および Excelマスター台帳の一括再生成スクリプト
-- `scripts/validate_gate.py`：0.5秒未満で全要件を検証する決定論ゲートスクリプト
+- `scripts/validate_gate.py` / `scripts/verify_rendered_videos.py`：台帳整合性および完成動画の映像・動き・規格を自動検査する決定論ゲートスクリプト
 
 ## 再生成＆検証コマンド
 ```bash
-python3 scripts/build_deliverables.py
+python3 scripts/render_short_video.py --day 1 --lang both --include-nobgm
 python3 scripts/validate_gate.py
+python3 scripts/verify_rendered_videos.py
 ```
