@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>株式会社ファインアトラス｜🎬 AIショート動画 毎日配信コンパス ＆ 365日台本スタジオ</title>
+  <meta name="description" content="株式会社ファインアトラス（ファインスタッフ×対馬水産）社長・広報・営業チーム専用。AIを活用したショート動画毎日配信計画（日英365日・730本・4大SNS年2,920投稿）の制作スタジオ＆実行コンパス。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="exec-hero">
+    <div class="exec-hero-inner">
+      <div class="exec-top-controls">
+        <div class="exec-kicker">
+          <span>🎬 株式会社ファインアトラス（ファインスタッフ × 対馬水産）</span>
+          <span>｜</span>
+          <span>社長・広報・営業専用 大文字高コントラスト仕様</span>
+        </div>
+
+        <div class="top-switchers">
+          <div class="control-group-box" role="group" aria-label="表示言語モード一括切替">
+            <span class="control-group-label">🌐 表示言語：</span>
+            <button type="button" class="btn-ctrl js-lang-btn is-active" data-lang="both">🇯🇵 日本語 ＋ 🇺🇸 英語（並べて表示）</button>
+            <button type="button" class="btn-ctrl js-lang-btn" data-lang="jp">🇯🇵 日本語のみ</button>
+            <button type="button" class="btn-ctrl js-lang-btn" data-lang="en">🇺🇸 英語のみ</button>
+          </div>
+
+          <div class="control-group-box" role="group" aria-label="文字サイズ切替">
+            <span class="control-group-label">🔍 文字サイズ：</span>
+            <button type="button" class="btn-ctrl js-scale-btn" data-scale="0.95">標準</button>
+            <button type="button" class="btn-ctrl js-scale-btn is-active" data-scale="1.05">大きく（推奨）</button>
+            <button type="button" class="btn-ctrl js-scale-btn" data-scale="1.18">特大</button>
+          </div>
+        </div>
+      </div>
+
+      <h1>FINE ATLAS 🎬 AIショート動画 毎日配信コンパス ＆ 365日台本スタジオ</h1>
+      <p class="exec-hero-lead">
+        <strong>「日本の旬と品質を、一箱に。世界の厨房へ。」</strong>（<em>"Japan's seasonal catch &amp; peak quality, in one box. To kitchens worldwide."</em>）<br />
+        1日1テーマ・30秒（9:16縦型・1080×1920）のショート動画を<strong>日本語版＋英語版</strong>で制作し、<strong>YouTube Shorts・Instagram Reels・TikTok・Facebook Reels の4大SNSへ毎日自動予約配信（年間365テーマ・730動画・計2,920投稿）</strong>するための統合制作スタジオです。<br />
+        広報担当者が<strong>1日20〜30分（または週1回の7日分まとめ制作）</strong>で迷わず運用できるよう、<strong>初回4週間（28本）の10項目完全台本・Dot指示文ジェネレーター・年間365日カレンダー・自社素材460点チェックリスト</strong>を1画面に集約しました。
+      </p>
+
+      <div class="hero-btn-bar">
+        <a href="ファインアトラス_AIショート動画_毎日配信マスター台帳.xlsx" download class="btn-hero btn-hero-gold">
+          📥 AIショート動画 毎日配信マスター台帳 (.xlsx) をダウンロード
+        </a>
+        <button type="button" id="btn-export-calendar-csv" class="btn-hero btn-hero-outline">
+          💾 365日配信カレンダー＆進捗をCSV保存
+        </button>
+        <button type="button" id="btn-print-page" class="btn-hero btn-hero-outline">
+          🖨️ この画面を印刷 / PDF保存
+        </button>
+        <a href="https://fineatlas.co.jp/" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-outline">
+          🌐 ファインアトラス公式HP
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <!-- Top KPI Summary Strip -->
+    <section class="kpi-grid" aria-label="年間配信計画＆制作進捗サマリー">
+      <div class="kpi-box">
+        <div class="kpi-label">📅 年間配信テーマ数</div>
+        <div class="kpi-val" id="kpi-yearly-themes">365 テーマ</div>
+        <div class="kpi-sub">1日1テーマ × 365日（月30本）</div>
+      </div>
+      <div class="kpi-box is-orange">
+        <div class="kpi-label">🇯🇵🇺🇸 日英バイリンガル動画</div>
+        <div class="kpi-val" id="kpi-bilingual-videos">年間 730 本</div>
+        <div class="kpi-sub">日本語365本 ＋ 英語365本（各30秒）</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">📱 4大SNS 年間総投稿数</div>
+        <div class="kpi-val" id="kpi-total-posts">2,920 投稿</div>
+        <div class="kpi-sub">YouTube / Insta / TikTok / FB</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">⏱️ 1日あたり目標作業時間</div>
+        <div class="kpi-val" id="kpi-work-time">20〜30 分</div>
+        <div class="kpi-sub">4つのAIツール連携・週1まとめ可</div>
+      </div>
+      <div class="kpi-box is-highlight">
+        <div class="kpi-label">🎬 初回28日 予約完了進捗</div>
+        <div class="kpi-val" id="kpi-ep28-progress">0 / 28 本</div>
+        <div class="kpi-sub">端末に自動保存（ステータス管理）</div>
+      </div>
+      <div class="kpi-box is-highlight">
+        <div class="kpi-label">📸 自社素材460点 準備率</div>
+        <div class="kpi-val" id="kpi-asset-progress">0 / 460 点</div>
+        <div class="kpi-sub">写真350枚 ＋ 動画110本（自社優先）</div>
+      </div>
+    </section>
+
+    <!-- 5-Mode Main Navigation Tabs -->
+    <nav class="studio-tabs-nav" aria-label="機能モード切替タブ">
+      <button type="button" class="studio-tab-btn is-active" data-tab="tab-episodes" aria-selected="true">
+        <span class="tab-badge">タブ①</span>
+        <span class="tab-main-text">🎬 初回28日（4週間）日英台本＆Vrew制作スタジオ</span>
+        <span class="tab-sub-text">10項目完全網羅・1タップVrew/Metricoolコピー</span>
+      </button>
+      <button type="button" class="studio-tab-btn" data-tab="tab-generator" aria-selected="false">
+        <span class="tab-badge">タブ②</span>
+        <span class="tab-main-text">🤖 Dot / ChatGPT 10項目プロンプト＆365日台本ジェネレーター</span>
+        <span class="tab-sub-text">毎日のDot指示文生成 ＆ その場で10項目即時完成</span>
+      </button>
+      <button type="button" class="studio-tab-btn" data-tab="tab-calendar" aria-selected="false">
+        <span class="tab-badge">タブ③</span>
+        <span class="tab-main-text">📅 年間365日（日英730本・2,920投稿）配信カレンダー</span>
+        <span class="tab-sub-text">第1週〜第53週スケジュール・進捗管理・CSV出力</span>
+      </button>
+      <button type="button" class="studio-tab-btn" data-tab="tab-assets" aria-selected="false">
+        <span class="tab-badge">タブ④</span>
+        <span class="tab-main-text">📸 事前準備素材データベース（写真350枚・動画110本）</span>
+        <span class="tab-sub-text">自社撮影優先ルール・全460点の撮影チェックリスト</span>
+      </button>
+      <button type="button" class="studio-tab-btn" data-tab="tab-compass" aria-selected="false">
+        <span class="tab-badge">タブ⑤</span>
+        <span class="tab-main-text">🧭 社長計画 × ファインアトラス実態 実行コンパス</span>
+        <span class="tab-sub-text">1日25分＆週1まとめ手順・7段階営業導線・10魚種原価表</span>
+      </button>
+    </nav>
+
+    <!-- ================================================================= -->
+    <!-- TAB 1: 初回28日（4週間）日英台本＆Vrew制作スタジオ -->
+    <!-- ================================================================= -->
+    <section id="tab-episodes" class="tab-panel is-active" aria-label="初回28日 日英台本＆Vrew制作スタジオ">
+      <!-- Quick 3-Step Workflow Banner -->
+      <div class="how-to-banner">
+        <h2 class="how-to-title">💡 広報担当者向け：1本20〜30分で完成する「Vrew ＆ Metricool」3ステップ手順</h2>
+        <div class="how-to-grid">
+          <div class="how-to-step">
+            <span class="how-to-step-num">ステップ ①（台本・字幕コピー）</span>
+            <div class="how-to-step-head">「📋 Vrew投入用を1タップコピー」を押す</div>
+            <p class="how-to-step-desc">各動画カードの紺色ボタンを押すと、30秒ナレーション台本と行分け字幕テキストが自動コピーされます。日本語版・英語版それぞれ1タップで取得できます。</p>
+          </div>
+          <div class="how-to-step">
+            <span class="how-to-step-num">ステップ ②（映像・音声合成）</span>
+            <div class="how-to-step-head">「④ 自社素材コード」の写真・動画をVrewへ配置</div>
+            <p class="how-to-step-desc">実際の商品・魚種は<strong>自社撮影の写真・動画（④に記載のコード）を最優先</strong>で使用します。不足するイメージカットのみ「⑤ AI画像生成プロンプト」で補完し、27〜30秒に共通キャッチコピーを入れます。</p>
+          </div>
+          <div class="how-to-step">
+            <span class="how-to-step-num">ステップ ③（4大SNS予約投稿）</span>
+            <div class="how-to-step-head">「📱 Metricool予約用コピー」で4つのSNSへ一括予約</div>
+            <p class="how-to-step-desc">Amazon少量お試し→リピート→法人契約・店舗別オリジナル魚BOX導線入りの投稿文とハッシュタグをコピーし、MetricoolでYouTube / Instagram / TikTok / Facebookへ予約します。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Control Panel -->
+      <div class="filter-panel">
+        <div class="filter-panel-header">
+          <h3 class="filter-panel-title">🔍 初回4週間（DAY-01〜DAY-28）台本絞り込み＆ステータスフィルター</h3>
+          <button type="button" id="btn-reset-ep-filters" class="btn-reset-filter">🔄 条件をすべてリセット</button>
+        </div>
+
+        <!-- Week Filter Pills -->
+        <div class="filter-row">
+          <span class="filter-row-label">📅 週を選択：</span>
+          <div class="pill-group" id="ep-week-pills">
+            <button type="button" class="pill-btn is-active" data-week="all">全4週間（28本）</button>
+            <button type="button" class="pill-btn" data-week="1">第1週（DAY 1〜7）</button>
+            <button type="button" class="pill-btn" data-week="2">第2週（DAY 8〜14）</button>
+            <button type="button" class="pill-btn" data-week="3">第3週（DAY 15〜21）</button>
+            <button type="button" class="pill-btn" data-week="4">第4週（DAY 22〜28）</button>
+          </div>
+        </div>
+
+        <!-- Weekday Filter Pills -->
+        <div class="filter-row">
+          <span class="filter-row-label">🗓️ 曜日別テーマ：</span>
+          <div class="pill-group" id="ep-weekday-pills">
+            <button type="button" class="pill-btn is-active" data-weekday="all">すべての曜日</button>
+            <button type="button" class="pill-btn" data-weekday="月曜日">月曜｜旬の魚紹介</button>
+            <button type="button" class="pill-btn" data-weekday="火曜日">火曜｜目利き・鮮度</button>
+            <button type="button" class="pill-btn" data-weekday="水曜日">水曜｜冷凍技術・解凍</button>
+            <button type="button" class="pill-btn" data-weekday="木曜日">木曜｜飲食店仕入れ改善</button>
+            <button type="button" class="pill-btn" data-weekday="金曜日">金曜｜寿司・刺身・料理</button>
+            <button type="button" class="pill-btn" data-weekday="土曜日">土曜｜市場・産地・水揚げ</button>
+            <button type="button" class="pill-btn" data-weekday="日曜日">日曜｜日本魚食文化・海外</button>
+          </div>
+        </div>
+
+        <!-- Select Dropdowns & Keyword Search -->
+        <div class="filter-inputs-grid">
+          <div class="filter-field">
+            <label for="ep-theme-select">🎯 19の配信テーマで絞込</label>
+            <select id="ep-theme-select" class="form-select">
+              <option value="all">すべての配信テーマ（全19テーマ）</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="ep-fish-select">🐟 主役魚種（10品目）で絞込</label>
+            <select id="ep-fish-select" class="form-select">
+              <option value="all">すべての魚種</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="ep-status-select">✅ 制作・予約ステータス</label>
+            <select id="ep-status-select" class="form-select">
+              <option value="all">すべてのステータス</option>
+              <option value="todo">⬜ 未着手</option>
+              <option value="vrew">🎬 Vrew編集済</option>
+              <option value="checked">🔍 事実・日英確認済</option>
+              <option value="scheduled">🚀 4大SNS予約済</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="ep-keyword-input">🔎 キーワード検索（台本・魚名・タグ）</label>
+            <input type="search" id="ep-keyword-input" class="form-input" placeholder="例：本マグロ、歩留まり、解凍、Amazon..." />
+          </div>
+        </div>
+
+        <div class="filter-result-bar">
+          <div class="filter-result-count">
+            表示中：<strong id="ep-showing-count">28</strong> 本 ／ 全28本（日英計56動画）
+          </div>
+          <div class="filter-legend">
+            <span class="badge-rule-navy">⏱️ 0-3秒：興味付け → 3-20秒：本題 → 20-27秒：要点 → 27-30秒：共通キャッチコピー</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Episodes Card List Container -->
+      <div id="episodes-container" class="episodes-grid"></div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- TAB 2: Dot / ChatGPT 10項目プロンプト＆365日台本ジェネレーター -->
+    <!-- ================================================================= -->
+    <section id="tab-generator" class="tab-panel" aria-label="Dot / ChatGPT 10項目プロンプト＆365日台本ジェネレーター">
+      <div class="how-to-banner">
+        <h2 class="how-to-title">🤖 365日いつでも1秒で生成！「Dotへの毎日の指示文」＆「10項目日英フル台本」即時スタジオ</h2>
+        <p class="section-lead-text">
+          社長計画「10. Dotへの毎日の指示内容」に、<strong>ファインアトラスの検証済み事実データ（全国10魚種の歩留まり・飲食店FL原価26.5〜30.2%・急速冷凍ドリップ比較・Amazon少量お試し→法人オリジナル魚BOX導線）</strong>を自動組み込みしました。<br />
+          <strong>①「年間カレンダーの日付（DAY 1〜DAY 365）から選ぶ」</strong>か、<strong>②「曜日×19テーマ×魚種×季節を自由に組み合わせる」</strong>だけで、<strong>左側に「Dot/ChatGPT貼り付け用プロンプト」</strong>、<strong>右側に「その場で使える10項目（①〜⑩）完成台本」</strong>が同時生成されます。
+        </p>
+      </div>
+
+      <!-- Generator Control Box -->
+      <div class="generator-control-card">
+        <div class="gen-mode-header">
+          <h3 class="gen-card-title">🎛️ ステップ1：制作したい日（DAY 1〜365）またはテーマ・魚種を選択してください</h3>
+          <div class="gen-quick-btns">
+            <button type="button" class="btn-action-sm" id="btn-gen-prev-day">◀ 前日へ</button>
+            <button type="button" class="btn-action-sm" id="btn-gen-next-day">翌日へ ▶</button>
+          </div>
+        </div>
+
+        <div class="gen-selectors-grid">
+          <div class="filter-field is-featured">
+            <label for="gen-day-select">📅 年間365日カレンダーから一発選択（DAY 1〜DAY 365）</label>
+            <select id="gen-day-select" class="form-select"></select>
+          </div>
+          <div class="filter-field">
+            <label for="gen-weekday-select">🗓️ 曜日テーマ（月〜日）</label>
+            <select id="gen-weekday-select" class="form-select"></select>
+          </div>
+          <div class="filter-field">
+            <label for="gen-theme19-select">🎯 19の配信テーマ</label>
+            <select id="gen-theme19-select" class="form-select"></select>
+          </div>
+          <div class="filter-field">
+            <label for="gen-fish-select">🐟 主役魚種（ファインアトラス10品目）</label>
+            <select id="gen-fish-select" class="form-select"></select>
+          </div>
+          <div class="filter-field">
+            <label for="gen-season-select">🌸 季節・旬モード</label>
+            <select id="gen-season-select" class="form-select">
+              <option value="春">🌸 春（桜鯛・初鰹・春告魚・歓送迎会需要）</option>
+              <option value="夏">🌻 夏（活〆ハモ・剣先イカ・夏バテ対策・インバウンド需要）</option>
+              <option value="秋">🍁 秋（戻り鰹・秋鮭・脂乗り青魚・秋の味覚コース）</option>
+              <option value="冬">❄️ 冬（寒ブリ・本マグロ・真ダラ・忘新年会＆鍋需要）</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="gen-custom-note">✍️ 追加メモ・強調したい訴求（任意）</label>
+            <input type="text" id="gen-custom-note" class="form-input" placeholder="例：Amazonでの1箱お試し、週末の仕込み時短、海外和食店向け..." />
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Output: Panel A (Dot Prompt) & Panel B (Instant 10-Item Script) -->
+      <div class="generator-split-layout">
+        <!-- Panel A: Dot / ChatGPT Prompt -->
+        <div class="gen-panel-card">
+          <div class="gen-panel-header is-navy">
+            <div>
+              <span class="panel-kicker">PANEL A｜外部AI（Dot / ChatGPT）投入用</span>
+              <h3 class="panel-title">📋 Dot / ChatGPT への毎日の指示文（10項目出力プロンプト）</h3>
+            </div>
+            <button type="button" id="btn-copy-dot-prompt" class="btn-copy-gold">
+              📋 このDot指示文を1タップコピー
+            </button>
+          </div>
+
+          <div class="gen-panel-body">
+            <div class="template-preset-bar">
+              <span class="preset-label">💡 テンプレート切替：</span>
+              <div id="dot-template-pills" class="pill-group"></div>
+            </div>
+            <textarea id="gen-dot-prompt-textarea" class="prompt-textarea" rows="22" readonly></textarea>
+            <div class="prompt-guardrail-note">
+              🛡️ <strong>事実確認ガードレール内蔵済：</strong>「確認できない数値や産地は推測で書かない」「27〜30秒は必ず共通キャッチコピーで締める」「実際の商品は自社撮影素材（460点）を優先指定する」指示が自動で含まれています。
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel B: Instant 10-Item Bilingual Full Package -->
+        <div class="gen-panel-card">
+          <div class="gen-panel-header is-gold">
+            <div>
+              <span class="panel-kicker">PANEL B｜外部AIを待たずに今すぐ使える！</span>
+              <h3 class="panel-title">⚡ その場で完成！10項目（①〜⑩）日英フルパッケージ即時プレビュー</h3>
+            </div>
+            <div class="panel-header-actions">
+              <button type="button" id="btn-copy-gen-all10" class="btn-copy-navy">
+                📦 全10項目を丸ごとコピー
+              </button>
+            </div>
+          </div>
+
+          <div class="gen-panel-body">
+            <div id="gen-instant-preview-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- TAB 3: 年間365日（日英730本・4SNS 2,920投稿）配信カレンダー＆進捗管理 -->
+    <!-- ================================================================= -->
+    <section id="tab-calendar" class="tab-panel" aria-label="年間365日配信カレンダー＆進捗管理">
+      <div class="how-to-banner">
+        <h2 class="how-to-title">📅 年間365日（第1週〜第53週）重複ゼロ設計カレンダー ＆ 4大SNS予約進捗トラッカー</h2>
+        <p class="section-lead-text">
+          「7. 同じ内容が重ならないための仕組み（①曜日ごとにテーマ変更 × ②19テーマ順番使用 × ③季節の旬の魚 × ④月ごとの過去テーマ確認）」に基づき設計された<strong>365日分の完全配信計画表</strong>です。<br />
+          どの日をクリックしても、<strong>その日の「10項目（①〜⑩）日英フル台本」をその場で開いて確認・Vrewコピー</strong>できます。
+        </p>
+      </div>
+
+      <!-- Progress Bar Card -->
+      <div class="progress-overview-card">
+        <div class="progress-stats-row">
+          <div>
+            <span class="progress-title">🚀 年間365日 制作＆予約完了進捗</span>
+            <span class="progress-numbers" id="cal-progress-summary-text">完了 0 テーマ（日英 0 動画 ／ 4大SNS 0 投稿）</span>
+          </div>
+          <div class="progress-action-btns">
+            <button type="button" id="btn-cal-export-csv" class="btn-action-navy">💾 365日スケジュール＆進捗をCSV出力</button>
+          </div>
+        </div>
+        <div class="progress-bar-track">
+          <div id="cal-progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Calendar Filter Controls -->
+      <div class="filter-panel">
+        <div class="filter-inputs-grid">
+          <div class="filter-field">
+            <label for="cal-week-select">📅 週（第1週〜第53週）</label>
+            <select id="cal-week-select" class="form-select">
+              <option value="all">すべての週（全365日）</option>
+              <option value="1-4">🌟 初回4週間（第1週〜第4週：DAY 1〜28）</option>
+              <option value="5-13">第5週〜第13週（2〜3ヶ月目）</option>
+              <option value="14-26">第14週〜第26週（4〜6ヶ月目）</option>
+              <option value="27-39">第27週〜第39週（7〜9ヶ月目）</option>
+              <option value="40-53">第40週〜第53週（10〜12ヶ月目）</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="cal-season-select">🌸 季節（春・夏・秋・冬）</label>
+            <select id="cal-season-select" class="form-select">
+              <option value="all">すべての季節</option>
+              <option value="春">🌸 春</option>
+              <option value="夏">🌻 夏</option>
+              <option value="秋">🍁 秋</option>
+              <option value="冬">❄️ 冬</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="cal-weekday-select">🗓️ 曜日</label>
+            <select id="cal-weekday-select" class="form-select">
+              <option value="all">すべての曜日</option>
+              <option value="月曜日">月曜日（旬の魚紹介）</option>
+              <option value="火曜日">火曜日（魚の特徴・目利き・鮮度）</option>
+              <option value="水曜日">水曜日（冷凍技術・鮮度保持・解凍）</option>
+              <option value="木曜日">木曜日（飲食店の仕入れ改善）</option>
+              <option value="金曜日">金曜日（寿司・刺身・料理活用）</option>
+              <option value="土曜日">土曜日（市場・産地・水揚げ）</option>
+              <option value="日曜日">日曜日（日本の魚食文化・海外発信）</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="cal-theme-select">🎯 19の配信テーマ</label>
+            <select id="cal-theme-select" class="form-select">
+              <option value="all">すべてのテーマ（19種）</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="cal-status-select">✅ 制作ステータス</label>
+            <select id="cal-status-select" class="form-select">
+              <option value="all">すべてのステータス</option>
+              <option value="todo">⬜ 未着手</option>
+              <option value="vrew">🎬 Vrew編集済</option>
+              <option value="checked">🔍 確認済</option>
+              <option value="scheduled">🚀 4大SNS予約済</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="cal-keyword-input">🔎 キーワード検索</label>
+            <input type="search" id="cal-keyword-input" class="form-input" placeholder="DAY番号、魚種名、タイトルで検索..." />
+          </div>
+        </div>
+        <div class="filter-result-bar">
+          <div class="filter-result-count">
+            該当件数：<strong id="cal-showing-count">365</strong> 日 ／ 全365日
+          </div>
+          <button type="button" id="btn-reset-cal-filters" class="btn-reset-filter">🔄 カレンダー絞込をリセット</button>
+        </div>
+      </div>
+
+      <!-- 365 Table / Responsive Cards -->
+      <div class="table-responsive-card">
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>DAY / 週</th>
+              <th>曜日・季節</th>
+              <th>19配信テーマ ＆ 主役魚種</th>
+              <th>① 動画タイトル（🇯🇵 日本語 ／ 🇺🇸 英語）＆ 冒頭3秒フック</th>
+              <th>④ 自社素材コード ＆ ⑨ 出典</th>
+              <th>⑩ ステータス</th>
+              <th>10項目台本を開く</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- TAB 4: 事前準備素材データベース（写真350枚・動画110本 ＝ 計460点） -->
+    <!-- ================================================================= -->
+    <section id="tab-assets" class="tab-panel" aria-label="事前準備素材データベース">
+      <!-- Core Priority Rule Banner -->
+      <div class="priority-rule-banner">
+        <div class="priority-rule-icon">📸</div>
+        <div class="priority-rule-content">
+          <div class="priority-rule-badge">社長計画「9. 事前準備素材」絶対ルール</div>
+          <h2 class="priority-rule-title">「実際の商品や魚種の紹介には、自社で撮影した写真・動画を優先する。不足素材のみAI生成で補完する」</h2>
+          <p class="priority-rule-desc">
+            料理人や海外バイヤーは「本物の魚の断面・ドリップの無さ・真空パックの霜の無さ」を一瞬で見抜きます。<br />
+            まずは下記8カテゴリ（<strong>写真4種 計350枚 ＋ 動画4種 計110本 ＝ 合計460点</strong>）を現場・加工場・提携産地で撮影・ストックし、動画カードの「④ 使用する写真・動画の指示」のコードと紐付けてVrewに投入してください。
+          </p>
+        </div>
+      </div>
+
+      <!-- Asset Progress Overview -->
+      <div class="asset-summary-grid" id="asset-summary-cards"></div>
+
+      <!-- Asset Categories Details & Interactive Checklist -->
+      <div id="asset-categories-container" class="asset-categories-grid"></div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- TAB 5: 社長計画 × ファインアトラス実態 実行コンパス -->
+    <!-- ================================================================= -->
+    <section id="tab-compass" class="tab-panel" aria-label="社長計画 × ファインアトラス実態 実行コンパス">
+      <div class="how-to-banner">
+        <h2 class="how-to-title">🧭 社長計画（全13章）× ファインアトラス実態データ 統合実行コンパス</h2>
+        <p class="section-lead-text">
+          今田社長策定の「ファインアトラス AIを活用したショート動画毎日配信計画」の全13項目と、ファインアトラスの実務強み（全国47都道府県ネットワーク・特A超低温冷凍・飲食店FL原価改善・Amazon〜法人別注BOX導線）を1ページで俯瞰できる実行マニュアルです。
+        </p>
+      </div>
+
+      <!-- 1. 4 AI Tools & Daily 20-30 Min Routine + Weekly Batch Schedule -->
+      <div class="compass-two-col">
+        <div class="compass-card">
+          <div class="compass-card-header is-navy">
+            <h3>🛠️ 4. 使用する4つのAIツールと役割分担</h3>
+          </div>
+          <div class="compass-card-body" id="compass-ai-tools-list"></div>
+        </div>
+
+        <div class="compass-card">
+          <div class="compass-card-header is-gold">
+            <h3>⏱️ 8. 広報担当者の作業手順（1日20〜30分ルーティン ①〜⑧）</h3>
+          </div>
+          <div class="compass-card-body" id="compass-daily-routine-list"></div>
+        </div>
+      </div>
+
+      <!-- Weekly Batch Production Schedule -->
+      <div class="compass-card">
+        <div class="compass-card-header is-navy">
+          <h3>📅 週1回「7日分（日英14本）まとめ制作 ＆ Metricool一括予約」おすすめ運用スケジュール</h3>
+        </div>
+        <div class="compass-card-body">
+          <p class="compass-note">
+            毎日25分ずつ作業する方法に加え、広報担当者の業務負荷をさらに下げる<strong>「毎週水曜または木曜の午後に翌週7日分をまとめて制作・予約する方式（計2.5時間/週）」</strong>も推奨されます。
+          </p>
+          <div class="batch-schedule-grid">
+            <div class="batch-step-box">
+              <div class="batch-step-time">STEP 1（約25分）</div>
+              <div class="batch-step-title">🤖 翌週7日分の10項目台本を一括確認</div>
+              <p>タブ①またはタブ②で翌週月曜〜日曜（7テーマ）の台本・事実数値・出典を確認し、Vrew投入テキストを準備します。</p>
+            </div>
+            <div class="batch-step-box">
+              <div class="batch-step-time">STEP 2（約40分）</div>
+              <div class="batch-step-title">📸 自社素材460点から7日分の写真・動画を選定</div>
+              <p>各台本の「④ 自社素材コード」に対応する丸魚・フィレ・解凍動画フォルダから素材をピックアップ（不足分のみCanva/AI画像生成）。</p>
+            </div>
+            <div class="batch-step-box">
+              <div class="batch-step-time">STEP 3（約55分）</div>
+              <div class="batch-step-title">🎬 Vrewで日英14本（各30秒）を連続書き出し</div>
+              <p>30秒共通テンプレート（27〜30秒ロゴ＆キャッチコピー固定）を使い、日本語版7本＋英語版7本をMP4（1080×1920）で書き出します。</p>
+            </div>
+            <div class="batch-step-box">
+              <div class="batch-step-time">STEP 4（約30分）</div>
+              <div class="batch-step-title">🚀 Metricoolで4大SNS（計56投稿）を一括予約</div>
+              <p>YouTube Shorts・Instagram Reels・TikTok・Facebook Reels へ7日分を一括スケジュール登録して完了です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 7-Stage Sales Funnel (Section 11) -->
+      <div class="compass-card">
+        <div class="compass-card-header is-gold">
+          <h3>📈 11. 営業につなげる7段階の流れ（ショート動画から法人契約・オリジナル魚BOX受注へ）</h3>
+        </div>
+        <div class="compass-card-body">
+          <div id="compass-funnel-grid" class="funnel-steps-grid"></div>
+        </div>
+      </div>
+
+      <!-- 3. Weekday Schedule (Section 5) & 19 Themes (Section 6) -->
+      <div class="compass-two-col">
+        <div class="compass-card">
+          <div class="compass-card-header is-navy">
+            <h3>🗓️ 5. 曜日別配信スケジュール（月〜日の7軸）</h3>
+          </div>
+          <div class="compass-card-body" id="compass-weekday-list"></div>
+        </div>
+
+        <div class="compass-card">
+          <div class="compass-card-header is-navy">
+            <h3>🎯 6. 19の配信テーマ一覧（順番ローテーション）</h3>
+          </div>
+          <div class="compass-card-body" id="compass-themes19-list"></div>
+        </div>
+      </div>
+
+      <!-- 4. Fine Atlas 10 Fish Species Yield & Cost Master Table (Verified Facts for Scripts) -->
+      <div class="compass-card">
+        <div class="compass-card-header is-navy">
+          <h3>🐟 ファインアトラス主力10魚種 歩留まり・飲食店1皿原価（FL比率26.5〜30.2%）検証済みファクト早見表</h3>
+        </div>
+        <div class="compass-card-body">
+          <p class="compass-note">
+            木曜日の「飲食店の仕入れ改善」や金曜日の「寿司・刺身・料理活用」動画で使用する、<strong>ファインアトラスの検証済み数値データ</strong>です。推測の数字を使わず、必ずこの検証済み範囲を引用してください。
+          </p>
+          <div class="table-responsive-card">
+            <table class="calendar-table">
+              <thead>
+                <tr>
+                  <th>魚種名（日・英）</th>
+                  <th>カテゴリ・規格</th>
+                  <th>一般市場相場</th>
+                  <th>FA卸価格目安</th>
+                  <th>可食部歩留まり</th>
+                  <th>1人前正味g ／ 1皿原価</th>
+                  <th>想定売価 ／ 原価率</th>
+                  <th>動画で訴求する現場メリット</th>
+                </tr>
+              </thead>
+              <tbody id="compass-fish10-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Fact Check & Integrity Guardrails (Section 10 & Fine Atlas Rules) -->
+      <div class="compass-card">
+        <div class="compass-card-header is-crimson">
+          <h3>🛡️ 広報担当者・AI台本チェック用「事実確認・誠実ガードレール（5大鉄則）」</h3>
+        </div>
+        <div class="compass-card-body">
+          <div id="compass-guardrails-grid" class="guardrails-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Full 10-Item Script Preview (from 365 Calendar or Quick View) -->
+  <div id="script-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div>
+          <span id="modal-kicker" class="modal-kicker">DAY-01｜10項目完全台本</span>
+          <h2 id="modal-title" class="modal-title">動画タイトル</h2>
+        </div>
+        <button type="button" id="btn-close-modal" class="btn-modal-close" aria-label="閉じる">✕ 閉じる</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-box" class="toast-box" role="status" aria-live="polite"></div>
+
+  <footer class="exec-footer">
+    <div class="exec-footer-inner">
+      <p class="footer-brand">🎬 株式会社ファインアトラス（FINE ATLAS Co., Ltd.）｜AIショート動画 毎日配信コンパス ＆ 365日台本スタジオ</p>
+      <p class="footer-catch">共通キャッチコピー：「日本の旬と品質を、一箱に。世界の厨房へ。」 / "Japan's seasonal catch &amp; peak quality, in one box. To kitchens worldwide."</p>
+      <p class="footer-meta">社内専用ツール（noindex, nofollow）｜制作ステータスと素材チェックリストはお使いのブラウザに自動保存されます。</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
