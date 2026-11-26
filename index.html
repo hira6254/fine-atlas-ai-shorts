@@ -124,6 +124,11 @@
         <span class="tab-main-text">🧭 社長計画 × ファインアトラス実態 実行コンパス</span>
         <span class="tab-sub-text">1日25分＆週1まとめ手順・7段階営業導線・10魚種原価表</span>
       </button>
+      <button type="button" class="studio-tab-btn" data-tab="tab-visits" aria-selected="false" style="border-color:#38bdf8;">
+        <span class="tab-badge">タブ⑥</span>
+        <span class="tab-main-text">👑 訪問商談・結果管理（社長ボード）</span>
+        <span class="tab-sub-text">サイボウズ日報（戸井・有福・富田ほか）訪問報告の自動回収＆原文そのまま転記</span>
+      </button>
     </nav>
 
     <!-- ================================================================= -->
@@ -696,6 +701,13 @@
         </div>
       </div>
     </section>
+
+    <!-- ================================================================= -->
+    <!-- TAB 6: 👑 訪問商談・結果管理（社長ボード・サイボウズ日報自動転記） -->
+    <!-- ================================================================= -->
+    <section id="tab-visits" class="tab-panel" aria-label="訪問商談・結果管理（社長ボード）">
+      <div class="js-fine-visit-board-container"></div>
+    </section>
   </main>
 
   <!-- Modal for Full 10-Item Script Preview (from 365 Calendar or Quick View) -->
@@ -724,6 +736,8 @@
   </footer>
 
   <script src="data.js"></script>
+  <script src="visit_reports_data.js"></script>
+  <script src="visit_reports_widget.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
