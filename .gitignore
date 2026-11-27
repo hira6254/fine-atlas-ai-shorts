@@ -1,1 +1,6 @@
 assets/gdrive_raw/
+clips/*.mp4
+clips/*.mov
+output/*.mp4
+output/overlay_tracks/
+__pycache__/

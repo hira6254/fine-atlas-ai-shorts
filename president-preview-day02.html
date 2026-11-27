@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>FINE ATLAS｜社長ご確認用 AIショート動画プレビュー（DAY-02 赤甘鯛）</title>
+  <meta name="description" content="株式会社ファインアトラス AIショート動画 第1弾（赤甘鯛の松笠焼き）日本語・英語版 30秒シネマ試作プレビュー" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy-deep: #081524;
+      --navy-card: #0e2238;
+      --navy-soft: #14304d;
+      --gold: #d99b3a;
+      --gold-bright: #fde066;
+      --ivory: #f6f3ec;
+      --muted: #cbd5e1;
+      --border: rgba(217, 155, 58, 0.34);
+      --crimson: #a43622;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at 50% 0%, #112944 0%, var(--navy-deep) 60%, #050d17 100%);
+      color: var(--ivory);
+      font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    /* Header */
+    .hero {
+      text-align: center;
+      padding: 22px 16px 26px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(217, 155, 58, 0.14);
+      border: 1px solid var(--gold);
+      color: var(--gold-bright);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-family: "Shippori Mincho", "Yu Mincho", serif;
+      font-size: clamp(1.55rem, 4.2vw, 2.35rem);
+      font-weight: 800;
+      margin: 0 0 10px;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+    }
+    .hero-sub {
+      max-width: 760px;
+      margin: 0 auto 14px;
+      font-size: clamp(0.92rem, 2.3vw, 1.03rem);
+      color: var(--muted);
+    }
+    .sound-tip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 10px;
+      background: rgba(164, 54, 34, 0.28);
+      border: 1px solid rgba(253, 224, 102, 0.55);
+      color: #fff8db;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    /* Main Video Grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+    @media (max-width: 820px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    .video-card {
+      background: linear-gradient(180deg, rgba(20, 48, 77, 0.72) 0%, rgba(11, 28, 46, 0.92) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card-head {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      background: var(--gold);
+      color: #0b1c2e;
+    }
+    .lang-pill.is-en {
+      background: #1e3a5f;
+      color: var(--gold-bright);
+      border: 1px solid var(--gold);
+    }
+    .spec-pill {
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    .player-shell {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid rgba(217, 155, 58, 0.65);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55);
+      margin-bottom: 16px;
+    }
+    .player-shell video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #000;
+    }
+
+    .card-title {
+      font-family: "Shippori Mincho", serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 6px;
+      color: #ffffff;
+    }
+    .card-catch {
+      font-size: 0.88rem;
+      color: var(--gold-bright);
+      text-align: center;
+      margin: 0 0 14px;
+    }
+
+    .btn-row {
+      width: 100%;
+      max-width: 380px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 11px 12px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.12s ease, opacity 0.15s ease;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-gold {
+      background: linear-gradient(135deg, #e0a444 0%, #c47d1e 100%);
+      color: #0b1c2e;
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--ivory);
+      border: 1px solid var(--border);
+    }
+    .btn:hover { opacity: 0.92; }
+
+    /* Highlights Section */
+    .section-box {
+      background: rgba(14, 34, 56, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 22px;
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-family: "Shippori Mincho", serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    @media (max-width: 720px) {
+      .pillar-grid { grid-template-columns: 1fr; }
+    }
+    .pillar {
+      background: rgba(8, 21, 36, 0.7);
+      border: 1px solid rgba(217, 155, 58, 0.24);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .pillar h3 {
+      margin: 0 0 6px;
+      font-size: 0.98rem;
+      color: #fff;
+    }
+    .pillar p {
+      margin: 0;
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+
+    /* Timeline table */
+    .tl-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .tl-table th, .tl-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+      vertical-align: top;
+    }
+    .tl-table th {
+      color: var(--gold-bright);
+      font-weight: 700;
+      white-space: nowrap;
+      width: 108px;
+    }
+
+    /* Contact sheet accordion */
+    details {
+      margin-top: 14px;
+      border: 1px solid rgba(217, 155, 58, 0.26);
+      border-radius: 12px;
+      background: rgba(8, 21, 36, 0.65);
+      overflow: hidden;
+    }
+    summary {
+      padding: 12px 16px;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--gold-bright);
+      font-size: 0.92rem;
+    }
+    .sheet-body {
+      padding: 0 14px 16px;
+      display: grid;
+      gap: 14px;
+    }
+    .sheet-body img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.84rem;
+      color: #94a3b8;
+    }
+    footer a {
+      color: var(--gold-bright);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="kicker">FINE ATLAS Co., Ltd. ｜ 社長ご確認用シネマ試作プレビュー</div>
+      <h1>AIショート動画 第1弾「赤甘鯛（ぐじ）の松笠焼き」</h1>
+      <p class="hero-sub">
+        対馬水産のプロ撮影実写映像100% × 油かけスロー補間演出 × 社長計画書（全13章）準拠の30秒日英バイリンガル構成。<br />
+        ログイン不要・無劣化フル画質でそのまま再生いただけます。
+      </p>
+      <div class="sound-tip">🔊 ぜひ「音声あり・縦フル画面」で30秒ご覧ください</div>
+    </header>
+
+    <section class="video-grid" aria-label="日英完成動画プレイヤー">
+      <!-- Japanese Edition -->
+      <article class="video-card">
+        <div class="card-head">
+          <span class="lang-pill">🇯🇵 日本語版（国内SNS用）</span>
+          <span class="spec-pill">1080×1920｜30.00秒｜音声あり</span>
+        </div>
+        <div class="player-shell">
+          <video id="vid-jp" controls playsinline preload="metadata" poster="videos/FA_DAY-02_Amadai_jp_poster.jpg?v=1">
+            <source src="videos/FA_DAY-02_Amadai_9x16_jp.mp4?v=1" type="video/mp4" />
+            お使いのブラウザは動画再生に対応していません。下の保存ボタンからダウンロードしてください。
+          </video>
+        </div>
+        <h2 class="card-title">高級魚「赤甘鯛（ぐじ）」なぜウロコを残して焼くのか？</h2>
+        <p class="card-catch">「日本の旬と品質を、一箱に。世界の厨房へ。」</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-gold" data-fs="vid-jp">📱 フル画面で再生</button>
+          <a class="btn btn-outline" href="videos/FA_DAY-02_Amadai_9x16_jp.mp4?v=1" download="FA_DAY-02_Amadai_9x16_jp.mp4">⬇️ MP4を保存</a>
+        </div>
+      </article>
+
+      <!-- English Edition -->
+      <article class="video-card">
+        <div class="card-head">
+          <span class="lang-pill is-en">🇺🇸 英語版（海外シェフ向け）</span>
+          <span class="spec-pill">1080×1920｜30.00秒｜音声あり</span>
+        </div>
+        <div class="player-shell">
+          <video id="vid-en" controls playsinline preload="metadata" poster="videos/FA_DAY-02_Amadai_en_poster.jpg?v=1">
+            <source src="videos/FA_DAY-02_Amadai_9x16_en.mp4?v=1" type="video/mp4" />
+            Your browser does not support video playback. Please download the MP4 below.
+          </video>
+        </div>
+        <h2 class="card-title">Red Tilefish "Amadai" — Why Chefs Keep the Scales On</h2>
+        <p class="card-catch">"Japan's seasonal catch &amp; peak quality, in one box. To kitchens worldwide."</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-gold" data-fs="vid-en">📱 Fullscreen</button>
+          <a class="btn btn-outline" href="videos/FA_DAY-02_Amadai_9x16_en.mp4?v=1" download="FA_DAY-02_Amadai_9x16_en.mp4">⬇️ Download MP4</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-box">
+      <h2 class="section-title">✨ 量産AIツールとは一線を画す「4つのこだわり」</h2>
+      <div class="pillar-grid">
+        <div class="pillar">
+          <h3>① 対馬水産の自社実写100%でプロの信頼を守る</h3>
+          <p>AI生成の偽物の魚は一切使わず、割烹厨房でのプロ撮影映像のみを使用。料理人の目利きにも堂々と通用する本物のシズル感です。</p>
+        </div>
+        <div class="pillar">
+          <h3>② 9:16 フル画面シネマ構図＆0.75倍スロー補間</h3>
+          <p>上下の黒帯を廃止しスマホ全面に料理が迫る構図へ刷新。冒頭の油かけ鱗立ちカットだけ滑らかな0.75倍スロー＋生環境音で引き込みます。</p>
+        </div>
+        <div class="pillar">
+          <h3>③ 社長計画書どおりの30秒構成＆検証済み数値</h3>
+          <p>「鱗付フィレ 歩留まり95%」「1皿原価¥501・原価率27.1%」を時間差で提示し、ラスト3秒でブランド統一キャッチコピーと少量購入導線で締めます。</p>
+        </div>
+        <div class="pillar">
+          <h3>④ この品質のまま4K・60fps化＆他魚種へ即量産可能</h3>
+          <p>Google Colab L4 GPUでの4K・60fps超解像パイプラインも同時構築済み。この方向性でOKなら「活〆穴子」「のどぐろ」「剣先イカ」へ即展開できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-box">
+      <h2 class="section-title">⏱️ 30秒タイムライン構成（社長計画書 第2章 準拠）</h2>
+      <table class="tl-table">
+        <tr>
+          <th>0〜3秒</th>
+          <td><strong>強烈フック（0.75倍速スロー補間）</strong>：高温の油をかけて赤甘鯛のウロコが一斉に花開く瞬間＋生シズル音</td>
+        </tr>
+        <tr>
+          <th>3〜20秒</th>
+          <td><strong>プロの専門解説</strong>：白木まな板での鱗付きフィレ切り付け → 備長炭の煙と焼き目（歩留まり95%・1皿原価¥501表示）</td>
+        </tr>
+        <tr>
+          <th>20〜27秒</th>
+          <td><strong>結論・完成一皿</strong>：和陶器に盛られた極上の松笠焼き（和食の松笠焼き・フレンチのポワレ両対応）</td>
+        </tr>
+        <tr>
+          <th>27〜30秒</th>
+          <td><strong>ブランド統一締め</strong>：「日本の旬と品質を、一箱に。世界の厨房へ。」＋ HP・Amazon少量試作→店舗別オリジナル魚BOX導線</td>
+        </tr>
+      </table>
+
+      <details>
+        <summary>🖼️ 4×2 シーン一覧（コンタクトシート）を開いて全カットを見る</summary>
+        <div class="sheet-body">
+          <img src="videos/FA_DAY-02_Amadai_contact_jp.jpg?v=1" alt="日本語版 4x2 コンタクトシート" loading="lazy" />
+          <img src="videos/FA_DAY-02_Amadai_contact_en.jpg?v=1" alt="英語版 4x2 コンタクトシート" loading="lazy" />
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      株式会社ファインアトラス｜社内確認専用プレビュー（検索エンジン非公開）<br />
+      <a href="index.html">▶ 365日制作スタジオ＆マスター台帳トップへ戻る</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var vids = [document.getElementById("vid-jp"), document.getElementById("vid-en")];
+      vids.forEach(function (v) {
+        if (!v) return;
+        v.addEventListener("play", function () {
+          vids.forEach(function (other) {
+            if (other && other !== v && !other.paused) other.pause();
+          });
+        });
+      });
+
+      document.querySelectorAll("[data-fs]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var v = document.getElementById(btn.getAttribute("data-fs"));
+          if (!v) return;
+          v.muted = false;
+          v.play().catch(function () {});
+          if (v.requestFullscreen) {
+            v.requestFullscreen();
+          } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+          } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
